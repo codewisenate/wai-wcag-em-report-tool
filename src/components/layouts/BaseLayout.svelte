@@ -1,13 +1,13 @@
 <!-- @Layout:Base -->
-<div class="Controls default-grid">
+<!-- <div class="Controls default-grid">
   <LanguageSelect locales="{locales}" />
-</div>
+</div> -->
 
 <div id="site-header" class="site-header">
   <div class="default-grid">
     <div class="tool-header">
       <div class="tool-header-name">
-        WCAG-EM R<span class="display-phablet">eport </span>T<span class="display-phablet">ool</span>
+        all•Access R<span class="display-phablet">eport </span>T<span class="display-phablet">ool</span>
       </div>
       <div class="tool-header-logo">
         <a href="http://w3.org/"><img

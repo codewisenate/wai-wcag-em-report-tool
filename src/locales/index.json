@@ -2,15 +2,5 @@
     {
         "lang": "en",
         "title": "English"
-    },
-    {
-        "lang": "nl",
-        "title": "Nederlands",
-        "status": "draft"
-    },
-    {
-        "lang": "fr",
-        "title": "Français",
-        "status": "draft"
     }
 ]

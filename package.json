@@ -1,13 +1,13 @@
 {
-    "name": "WCAG-EM-Report-Tool",
+    "name": "all•Access Report Tool",
     "version": "3.0.3",
     "repository": {
         "type": "git",
-        "url": "git://github.com/w3c/wcag-em-report-tool.git"
+        "url": "git://github.com/codewisenate/wai-wcag-em-report-tool.git"
     },
     "scripts": {
         "build": "npm run clean:build & rollup -c",
-        "build-production": "export BASEPATH='/WAI/eval/report-tool' && npm run clean:build && rollup -c",
+        "build-production": "export BASEPATH='/report-tool' && npm run clean:build && rollup -c",
         "build-ghpages": "export BASEPATH='/wai-wcag-em-report-tool' && npm run clean:build && rollup -c",
         "dev": "export BASEPATH='' && npm run clean:dev & rollup -c -w",
         "clean": "rimraf ./build ./node_modules",

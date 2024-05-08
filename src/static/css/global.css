@@ -51,6 +51,12 @@
     height: auto;
   }
 }
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .app-container {
   background-color: white;
