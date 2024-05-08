@@ -1,59 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <title>{__TITLE__}</title>
-    <meta name="theme-color" content="#333333" />
-    
-    <!-- WAI Website Components: https://wai-website-theme.netlify.app/components/ -->
-    <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css?1573220675560713000" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
-    <!-- Generated styles -->
-    <link href="{__BASEPATH__}/bundles/global.css" rel="stylesheet" />
-    <link href="{__BASEPATH__}/bundles/main.css" rel="stylesheet" />
+  <title>{__TITLE__}</title>
+  <meta name="theme-color" content="#333333" />
 
-    <link rel="icon" type="image/png" href="{__BASEPATH__}/images/favicon.png" />
-  </head>
+  <!-- WAI Website Components: https://wai-website-theme.netlify.app/components/ -->
+  <link rel="stylesheet" href="https://w3.org/WAI/assets/css/style.css?1573220675560713000" />
 
-  <body>
-    <div id="wai-wcag-em-report-tool" class="app-container">
-      <!-- WCAG-EM REPORT TOOL APP CONTENTS -->
+  <!-- Generated styles -->
+  <link href="{__BASEPATH__}/bundles/global.css" rel="stylesheet" />
+  <link href="{__BASEPATH__}/bundles/main.css" rel="stylesheet" />
+
+  <link rel="icon" type="image/png" href="{__BASEPATH__}/images/favicon.png" />
+</head>
+
+<body>
+  <div id="wai-wcag-em-report-tool" class="app-container">
+    <!-- WCAG-EM REPORT TOOL APP CONTENTS -->
+  </div>
+
+  <!-- WAI SPECIFIC BELOW -->
+  <footer class="site-footer grid-4q" aria-label="Site">
+    <div class="q1-start q3-end about">
+      <div>
+        <p>
+          <a class="largelink" href="https://allaccess.dev/" lang="en" dir="auto" translate="no">all•Access Reporting
+            Tool</a>
+        </p>
+        <p>
+          Maximizing your website and reach through greater digital accessibility.
+        </p>
+      </div>
+
+      <div lang="en" dir="auto" translate="no">
+        <p>
+          Copyright © {__APP_BUILD_YEAR__} <a href="https://allaccess.dev/">all•Access</a>,
+          Based on the <a href="https://www.w3.org/WAI/eval/report-tool/">WCAG-EM Report Tool</a>,
+          <a href="https://w3.org/WAI/about/using-wai-material/">Permission to Use WAI Material</a>.
+        </p>
+      </div>
     </div>
+  </footer>
+  <script src="{__BASEPATH__}/bundles/main.js"></script>
+</body>
 
-    <!-- WAI SPECIFIC BELOW -->
-      <footer class="site-footer grid-4q" aria-label="Site">
-        <div class="q1-start q3-end about">
-          <div>
-            <p>
-              <a
-                class="largelink"
-                href="https://allaccess.dev/"
-                lang="en"
-                dir="auto"
-                translate="no"
-                >all•Access Reporting Tool</a
-              >
-            </p>
-            <p>
-              Maximizing your website and reach through greater digital accessibility.
-            </p>
-          </div>
-
-          <div lang="en" dir="auto" translate="no">
-            <p>
-              Copyright © {__APP_BUILD_YEAR__} all•Access, <a
-                href="https://allaccess.dev/"
-                ></a
-              >,
-              <a href="https://w3.org/WAI/about/using-wai-material/"
-                >Permission to Use WAI Material</a
-              >.
-            </p>
-          </div>
-        </div>
-      </footer>
-    <script src="{__BASEPATH__}/bundles/main.js"></script>
-  </body>
 </html>

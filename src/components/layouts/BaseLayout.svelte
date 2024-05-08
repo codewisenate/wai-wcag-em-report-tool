@@ -38,6 +38,9 @@
 <!-- /@Layout -->
 
 <style>
+  #site-header#site-header {
+    background-color: rgb(15,23,42);
+  }
   .site-header .tool-header {
     grid-column: 2 / 10;
     width: 100%;
@@ -50,6 +53,11 @@
 
   .Controls {
     font-size: 0.8125em;
+  }
+
+  .tool-header-logo {
+    background-color: var(--w3c-classic);
+    padding-inline: 0.25rem 1rem;
   }
 
   @media (min-width: 60em) {
