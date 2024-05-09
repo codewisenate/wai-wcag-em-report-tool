@@ -5549,6 +5549,7 @@ export function downloadFileHTML({ contents, name = 'download.txt', type = 'text
     border: 1px solid #bccbd3;
     border: 1px solid var(--cloudy);
     vertical-align: top;
+    text-align: left;
   }
  
   .dense td,
