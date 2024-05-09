@@ -1,6 +1,7 @@
 {#each principles as principle}
   <h4>
-    <strong>Section {principle} {TRANSLATED.PRINCIPLES[principle].TITLE}</strong> : {TRANSLATED.PRINCIPLES[principle].DESCRIPTION}
+    <strong>Section {principle}
+      {TRANSLATED.PRINCIPLES[principle].TITLE}</strong> : {TRANSLATED.PRINCIPLES[principle].DESCRIPTION}
   </h4>
 
   {#each guidelines.filter((g) => g.indexOf(principle) === 0) as guideline}
@@ -15,11 +16,14 @@
       <tbody>
         {#each ['A', 'AA', 'AAA'] as level}
           {#if guidelineCriteria(guideline).some((criterion) => TRANSLATED.CRITERIA[criterion.num].LEVEL === level)}
-          <tr class="Auditor__ResultsTableHeader">
-            <th scope="col">Table {guideline} – Level {level} <!-- {TRANSLATED.HEADER_SUCCESS_CRITERION} --></th>
-            <th scope="col">{TRANSLATED.HEADER_RESULT_VPAT}</th>
-            <th scope="col">{TRANSLATED.HEADER_OBSERVATIONS_VPAT}</th>
-            <th scope="col" class="strip">{TRANSLATED.EDIT}</th></tr>
+            <tr class="Auditor__ResultsTableHeader">
+              <th scope="col">
+                Table {guideline} – Level {level}
+              </th>
+              <th scope="col">{TRANSLATED.HEADER_RESULT_VPAT}</th>
+              <th scope="col">{TRANSLATED.HEADER_OBSERVATIONS_VPAT}</th>
+              <th scope="col" class="strip">{TRANSLATED.EDIT}</th>
+            </tr>
             {#each guidelineCriteria(guideline) as criterion (criterion.num)}
               {#if TRANSLATED.CRITERIA[criterion.num].LEVEL === level}
                 <tr class="Auditor__Assertion">
@@ -41,7 +45,8 @@
                       {/each}
                     </ul>
                   </th>
-                  <td><!-- Conformance level content -->
+                  <td>
+                    <!-- Conformance level content -->
                     {#each scopeAssertion(criterion) as assertion}
                       {#if sampleAssertions(criterion).length}
                         <h6>{TRANSLATED.HEADING_SCOPE_RESULTS}</h6>
@@ -84,7 +89,8 @@
                       {/each}
                     {/if}
                   </td>
-                  <td><!-- Rematks and Explanations content -->
+                  <td>
+                    <!-- Rematks and Explanations content -->
                     {#each scopeAssertion(criterion) as assertion}
                       {#if assertion.result.description}
                         {#if sampleAssertions(criterion).length}
@@ -93,9 +99,13 @@
                         <p class="results-label-mobile">
                           {TRANSLATED.LABEL_OBSERVATION}:
                         </p>
+                        {#if assertionHasContents(assertion)}
                         {@html marked(assertion.result.description, {
                           sanitize: true
                         })}
+                         {:else}
+                         <p>{TRANSLATED.NO_OBSERVATIONS_FOUND}</p>
+                       {/if}
                       {/if}
                     {/each}
                     {#if sampleAssertions(criterion).length}
@@ -112,8 +122,8 @@
                             <p>{TRANSLATED.NO_OBSERVATIONS_FOUND}</p>
                           {/if}
                         {/if}
-                      {/each}
-                    {/if}
+                        {/each}
+                      {/if}
                   </td>
                   <td class="strip">
                     <Link
@@ -132,8 +142,12 @@
                         stroke-linejoin="round"
                         class="feather feather-edit"
                       >
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        <path
+                          d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                        ></path>
+                        <path
+                          d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                        ></path>
                       </svg>
                     </Link>
                   </td>
@@ -223,11 +237,11 @@
   const { translate, translateToObject } = getContext('app');
 
   const outcomeMap = {
-    "Passed": "Supports",
-    "Failed": "Does Not Support",
-    "Cannot tell or partial support": "Partially Supports",
-    "Not present": "Not Applicable",
-    "Not checked": "Not Evaluated"
+    Passed: 'Supports',
+    Failed: 'Does Not Support',
+    'Cannot tell or partial support': 'Partially Supports',
+    'Not present': 'Not Applicable',
+    'Not checked': 'Not Evaluated'
   };
 
   // marked.setOptions({
@@ -252,7 +266,9 @@
     HEADER_RESULT: $translate('PAGES.REPORT.HEADER_RESULT'),
     HEADER_RESULT_VPAT: $translate('PAGES.REPORT.HEADER_RESULT_VPAT'),
     HEADER_OBSERVATIONS: $translate('PAGES.REPORT.HEADER_OBSERVATIONS'),
-    HEADER_OBSERVATIONS_VPAT: $translate('PAGES.REPORT.HEADER_OBSERVATIONS_VPAT'),
+    HEADER_OBSERVATIONS_VPAT: $translate(
+      'PAGES.REPORT.HEADER_OBSERVATIONS_VPAT'
+    ),
     NO_OBSERVATIONS_FOUND: $translate('PAGES.REPORT.NO_OBSERVATIONS_FOUND'),
     EDIT: $translate('UI.REPORT.EDIT')
   };
@@ -268,6 +284,10 @@
       })
     )
   ];
+
+  const remarksMap = {
+    'No observations added': 'No remarks made.'
+  };
 
   function guidelineCriteria(guideline) {
     return filterAssertions().filter(

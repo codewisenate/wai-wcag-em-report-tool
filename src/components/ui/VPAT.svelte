@@ -2,25 +2,23 @@
  * @component
  *   VPAT
  * -->
-<div tabindex="-1" bind:this={sectionAbout}>
-
+<div tabindex="-1" bind:this="{sectionAbout}">
   <h3>{TRANSLATED.REPORT_DATE}</h3>
   <ReportHeaderValue field="EVALUATION_DATE" store="summaryStore" />
 
-  <div tabindex="-1" bind:this={sectionExecutiveSummary}>
+  <div tabindex="-1" bind:this="{sectionExecutiveSummary}">
     <h3>{TRANSLATED.HEADING_SUMMARY_VPAT}</h3>
 
-      <div>
-        <ReportHeaderValue 
-          multiline={true} 
-          field="EVALUATION_SUMMARY" 
-          store="summaryStore">
-        </ReportHeaderValue>
-      </div>
+    <div>
+      <ReportHeaderValue
+        multiline="{true}"
+        field="EVALUATION_SUMMARY"
+        store="summaryStore"
+      />
+    </div>
   </div>
 
   <h3>{TRANSLATED.HEADING_ABOUT_VPAT}</h3>
-
 
   <dl>
     <dt>
@@ -29,7 +27,7 @@
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue field="EVALUATION_CREATOR" store="summaryStore"></ReportHeaderValue>
+      <ReportHeaderValue field="EVALUATION_CREATOR" store="summaryStore" />
     </dd>
 
     <dt>
@@ -38,11 +36,14 @@
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue field="EVALUATION_CREATOR_CONTACT" store="summaryStore"></ReportHeaderValue>
+      <ReportHeaderValue
+        field="EVALUATION_CREATOR_CONTACT"
+        store="summaryStore"
+      />
     </dd>
 
     <dt>
-      <ReportHeaderKey editing={editAbout} field="EVALUATION_COMMISSIONER">
+      <ReportHeaderKey field="EVALUATION_COMMISSIONER">
         {TRANSLATED.LABEL_COMMISSIONER}
       </ReportHeaderKey>
     </dt>
@@ -54,96 +55,140 @@
   <h3>Notes</h3>
   <dl>
     <dt>
-      <ReportHeaderKey editing={editEvaluationScope} field="SITE_NAME">
-        {TRANSLATED.LABEL_WEBSITE_NAME}
+      <ReportHeaderKey field="SITE_NAME">
+        {labelMap[TRANSLATED.LABEL_WEBSITE_NAME]}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue editing={editEvaluationScope} field="SITE_NAME" store="scopeStore" />
+      <ReportHeaderValue
+        field="SITE_NAME"
+        store="scopeStore"
+      />
     </dd>
-  
     <dt>
-      <ReportHeaderKey editing={editEvaluationScope} field="WEBSITE_SCOPE">
-        {TRANSLATED.LABEL_WEBSITE_SCOPE}
+      <ReportHeaderKey field="WEBSITE_SCOPE">
+        {labelMap[TRANSLATED.LABEL_WEBSITE_SCOPE]}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue editing={editEvaluationScope} field="WEBSITE_SCOPE" store="scopeStore" multiline={true} />
+      <ReportHeaderValue
+        field="WEBSITE_SCOPE"
+        store="scopeStore"
+        multiline="{true}"
+      />
     </dd>
+  </dl>
+
+  <h3>Evaluation Methods Used</h3>
+  <dl>
     <dt>
       <ReportHeaderKey field="AS_BASELINE">
         {TRANSLATED.LABEL_ACCESSIBILITY_SUPPORT_BASELINE}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue field="AS_BASELINE" store="scopeStore" multiline={true} />
+      <ReportHeaderValue
+        field="AS_BASELINE"
+        store="scopeStore"
+        multiline="{true}"
+      />
     </dd>
 
     <dt>
-      <ReportHeaderKey field="ADDITIONAL_REQUIREMENTS"> 
+      <ReportHeaderKey field="ADDITIONAL_REQUIREMENTS">
         {TRANSLATED.LABEL_EXTRA_REQUIREMENTS}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue field="ADDITIONAL_REQUIREMENTS" store="scopeStore" multiline={true} />
+      <ReportHeaderValue
+        field="ADDITIONAL_REQUIREMENTS"
+        store="scopeStore"
+        multiline="{true}"
+      />
     </dd>
   </dl>
-
-
 </div>
 
-
-
-<div tabindex="-1" bind:this={sectionEvaluationScope}>
+<div tabindex="-1" bind:this="{sectionEvaluationScope}">
   <h3>{TRANSLATED.HEADING_SCOPE_VPAT}</h3>
-  <div>This report covers the degree of conformance for the following accessibility standard/guidelines:</div>
+  <div>
+    This report covers the degree of conformance for the following accessibility
+    standard/guidelines:
+  </div>
   <dl>
-
     <dt>
       <ReportHeaderKey field="WCAG_VERSION">
         {TRANSLATED.LABEL_WCAG_VERSION}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderMultiValue field="WCAG_VERSION" store="scopeStore" options={wcagVersions}></ReportHeaderMultiValue>
+      <ReportHeaderMultiValue
+        field="WCAG_VERSION"
+        store="scopeStore"
+        options="{wcagVersions}"
+      />
     </dd>
 
     <dt>
       <ReportHeaderKey field="CONFORMANCE_TARGET">
-       Level  {TRANSLATED.LABEL_CONFORMANCE_TARGET}
+        Level {TRANSLATED.LABEL_CONFORMANCE_TARGET}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderMultiValue field="CONFORMANCE_TARGET" store="scopeStore" options={conformanceLevels}></ReportHeaderMultiValue>
+      <ReportHeaderMultiValue
+        field="CONFORMANCE_TARGET"
+        store="scopeStore"
+        options="{conformanceLevels}"
+      />
     </dd>
   </dl>
 </div>
 
 <h3>Terms</h3>
-<div>The terms used in the Conformance Level information are defined as follows:</div>
+<div>
+  The terms used in the Conformance Level information are defined as follows:
+</div>
 <div class="card">
-<dl>
-  <dt>Supports</dt>
-  <dd>The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.</dd>
-  <dt>Partially Supports</dt>
-  <dd>Some functionality of the product does not meet the criterion.</dd>
-  <dt>Does Not Support</dt>
-  <dd>The majority of product functionality does not meet the criterion.</dd>
-  <dt>Not Applicable</dt>
-  <dd>The criterion is not relevant to the product.</dd>
-  <dt>Not Evaluated</dt>
-  <dd>The product has not been evaluated against the criterion. This can be used only in WCAG 2.0 Level AAA.</dd>
-</dl>
+  <dl>
+    <dt>Supports</dt>
+    <dd>
+      The functionality of the product has at least one method that meets the
+      criterion without known defects or meets with equivalent facilitation.
+    </dd>
+    <dt>Partially Supports</dt>
+    <dd>Some functionality of the product does not meet the criterion.</dd>
+    <dt>Does Not Support</dt>
+    <dd>The majority of product functionality does not meet the criterion.</dd>
+    <dt>Not Applicable</dt>
+    <dd>The criterion is not relevant to the product.</dd>
+    <dt>Not Evaluated</dt>
+    <dd>
+      The product has not been evaluated against the criterion. This can be used
+      only in WCAG 2.0 Level AAA.
+    </dd>
+  </dl>
 </div>
 
 <h2>{TRANSLATED.HEADING_AUDIT_RESULTS_DETAIL}</h2>
 
 <ReportVPATResults criteria="{$wcag}" />
 
-<h2 class='strip'>Disclaimer</h2>
-<p>This report covers the degree of conformance for Web Content Accessibility Guidelines <ReportHeaderMultiValue editing={editEvaluationScope} field="WCAG_VERSION" store="scopeStore" options={wcagVersions}></ReportHeaderMultiValue>. Therefore other details and standards have not been included.</p>
+<h2 class="strip">Disclaimer</h2>
+<p>
+  This report covers the degree of conformance for Web Content Accessibility
+  Guidelines
+  <ReportHeaderMultiValue
+    editing="{editEvaluationScope}"
+    field="WCAG_VERSION"
+    store="scopeStore"
+    options="{wcagVersions}"
+  />. Therefore other details and standards have not been included.
+</p>
 
-<div>“Voluntary Product Accessibility Template” and “VPAT” are registered service marks of the Information Technology Industry Council (ITI)</div>
+<div>
+  “Voluntary Product Accessibility Template” and “VPAT” are registered service
+  marks of the Information Technology Industry Council (ITI)
+</div>
 
 <!-- /component -->
 
@@ -156,7 +201,7 @@
     font-weight: normal;
   }
   dt:after {
-    content: ":";
+    content: ':';
   }
   dd {
     margin-left: 0;
@@ -182,13 +227,17 @@
     margin-bottom: 1em;
     display: block;
   }
-  </style>
+</style>
 
 <script>
   import { getContext } from 'svelte';
-  import marked from "marked";
+  import marked from 'marked';
 
-  import { wcag, CONFORMANCE_LEVELS, WCAG_VERSIONS } from '@app/stores/wcagStore.js';
+  import {
+    wcag,
+    CONFORMANCE_LEVELS,
+    WCAG_VERSIONS
+  } from '@app/stores/wcagStore.js';
 
   import ReportVPATResults from '@app/components/ui/Report/ReportVPATResults.svelte';
   import ReportHeaderKey from '@app/components/ui/Report/ReportHeaderKey.svelte';
@@ -225,8 +274,12 @@
     LABEL_WEBSITE_SCOPE: $translate('PAGES.SCOPE.LABEL_SITE_SCOPE'),
     LABEL_WCAG_VERSION: $translate('PAGES.SCOPE.LABEL_WCAG_VERSION'),
     LABEL_CONFORMANCE_TARGET: $translate('PAGES.SCOPE.LABEL_CONFORMANCE_TGT'),
-    LABEL_EXTRA_REQUIREMENTS: $translate('PAGES.SCOPE.LABEL_EXTRA_REQUIREMENTS'),
-    LABEL_ACCESSIBILITY_SUPPORT_BASELINE: $translate('PAGES.SCOPE.LABEL_SUPPORT_BASE'),
+    LABEL_EXTRA_REQUIREMENTS: $translate(
+      'PAGES.SCOPE.LABEL_EXTRA_REQUIREMENTS'
+    ),
+    LABEL_ACCESSIBILITY_SUPPORT_BASELINE: $translate(
+      'PAGES.SCOPE.LABEL_SUPPORT_BASE'
+    ),
     HEADING_AUDIT_RESULTS_OVERVIEW: $translate('UI.REPORT.HD_SCORE'),
     HEADING_AUDIT_RESULTS_DETAIL: $translate('UI.REPORT.HD_CRITERIA_REPORT'),
     HEADING_SAMPLE: $translate('UI.REPORT.HD_SAMPLE'),
@@ -250,8 +303,14 @@
     ],
     specifics: $summaryStore['EVALUATION_SPECIFICS'],
     summary: $summaryStore['EVALUATION_SUMMARY'],
-    title: $summaryStore['EVALUATION_TITLE'] || $translate('PAGES.REPORT.TITLE'),
+    title:
+      $summaryStore['EVALUATION_TITLE'] || $translate('PAGES.REPORT.TITLE'),
     tech: $exploreStore['TECHNOLOGIES_RELIED_UPON']
+  };
+
+  const labelMap = {
+    "Website name": "Product name",
+    "Scope of the website": "Scope of the product evaluation",
   };
 
   let wcagVersions = [...WCAG_VERSIONS].reverse().map((version) => {
