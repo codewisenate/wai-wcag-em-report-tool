@@ -69,6 +69,10 @@
     margin-bottom: 0;
   }
 
+  :global(input:not([type="checkbox"]):not([type="radio"])), 
+  :global(textarea) {
+    padding: .66rem;
+  }
   h1,
   .button {
     margin-block: 1rem 0;

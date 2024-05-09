@@ -8718,8 +8718,7 @@ export function downloadFileVPAT({ contents, name = 'download.txt', type = 'text
   }
  
   /*# sourceMappingURL=main.css.map */
-  th:nth-of-type(4),
-  td:last-of-type {
+  th:nth-of-type(4) {
     display: none !important;
   }
  
