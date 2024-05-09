@@ -3,7 +3,7 @@
  *   Pager
  *
  * -->
-<div class="default-grid">
+<div class="default-grid pager-container">
   <aside class="Pager pager" aria-label={TRANSLATED.PREVIOUSNEXT}>
     <ul>
       {#if previousPage}

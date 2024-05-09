@@ -41,6 +41,7 @@
 </div>
 
 <style>
+
   .page-content {
     padding: 2em 0;
   }
@@ -52,6 +53,16 @@
   }
   :global(main > *:not(:last-child)) {
     margin-bottom: 1em;
+  }
+
+  :global(#wai-wcag-em-report-tool) {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100dvh - 150px);
+  }
+
+  :global(.pager-container) {
+    margin-top: auto;
   }
 
   :global(.mb-0.mb-0) {

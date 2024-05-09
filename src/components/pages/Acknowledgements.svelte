@@ -5,7 +5,7 @@
  <Page title="Acknowledgements" pageid="acknowledgements">
 
   <p>
-    The all•Access Report Tool is based on development by the Accessibility Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO">EOWG</a>). It was initially developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT Project</a>, and updated with support of the <a href="https://www.w3.org/WAI/about/projects/wai-tools/">WAI-Tools Project</a>, co-funded by the European Commission (EC). 
+    The all•Access Report Tool is based on the <a href="https://www.w3.org/WAI/eval/report-tool/"> WCAG-EM Report Tool</a> (<a href="https://www.w3.org/WAI/eval/report-tool/acknowledgements">Acknowledgements</a>) which in turn is based on development by the Accessibility Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO">EOWG</a>). It was initially developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT Project</a>, and updated with support of the <a href="https://www.w3.org/WAI/about/projects/wai-tools/">WAI-Tools Project</a>, co-funded by the European Commission (EC). 
   </p> 
 
 </Page>
