@@ -75,6 +75,7 @@
     "SUCCESS_CRITERION": {
         "1.1.1": {
             "TITLE": "Non-text Content",
+            "LEVEL": "A",
             "DESCRIPTION": "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.",
             "DETAILS": {
                 "1": {
@@ -105,6 +106,7 @@
         },
         "1.2.1": {
             "TITLE": "Audio-only and Video-only (Prerecorded)",
+            "LEVEL": "A",
             "DESCRIPTION": "For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:",
             "DETAILS": {
                 "1": {
@@ -119,66 +121,79 @@
         },
         "1.2.2": {
             "TITLE": "Captions (Prerecorded)",
+            "LEVEL": "A",
             "DESCRIPTION": "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
             "DETAILS": {}
         },
         "1.2.3": {
             "TITLE": "Audio Description or Media Alternative (Prerecorded)",
+            "LEVEL": "A",
             "DESCRIPTION": "An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.",
             "DETAILS": {}
         },
         "1.2.4": {
             "TITLE": "Captions (Live)",
+            "LEVEL": "AA",
             "DESCRIPTION": "Captions are provided for all live audio content in synchronized media.",
             "DETAILS": {}
         },
         "1.2.5": {
             "TITLE": "Audio Description (Prerecorded)",
+            "LEVEL": "AA",
             "DESCRIPTION": "Audio description is provided for all prerecorded video content in synchronized media.",
             "DETAILS": {}
         },
         "1.2.6": {
             "TITLE": "Sign Language (Prerecorded)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Sign language interpretation is provided for all prerecorded audio content in synchronized media.",
             "DETAILS": {}
         },
         "1.2.7": {
             "TITLE": "Extended Audio Description (Prerecorded)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media.",
             "DETAILS": {}
         },
         "1.2.8": {
             "TITLE": "Media Alternative (Prerecorded)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "An alternative for time-based media is provided for all prerecorded synchronized media and for all prerecorded video-only media.",
             "DETAILS": {}
         },
         "1.2.9": {
             "TITLE": "Audio-only (Live)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "An alternative for time-based media that presents equivalent information for live audio-only content is provided.",
             "DETAILS": {}
         },
         "1.3.1": {
             "TITLE": "Info and Relationships",
+            "LEVEL": "A",
             "DESCRIPTION": "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.",
             "DETAILS": {}
         },
         "1.3.2": {
             "TITLE": "Meaningful Sequence",
+            "LEVEL": "A",
             "DESCRIPTION": "When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined.",
             "DETAILS": {}
         },
         "1.3.3": {
             "TITLE": "Sensory Characteristics",
+            "LEVEL": "A",
             "DESCRIPTION": "Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.",
             "DETAILS": {}
         },
         "1.3.4": {
             "TITLE": "Orientation",
+            "LEVEL": "AA",
             "DESCRIPTION": "Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential.",
             "DETAILS": {}
         },
         "1.3.5": {
             "TITLE": "Identify Input Purpose",
+            "LEVEL": "AA",
             "DESCRIPTION": "The purpose of each input field collecting information about the user can be programmatically determined when:",
             "DETAILS": {
                 "1": {
@@ -191,21 +206,25 @@
         },
         "1.3.6": {
             "TITLE": "Identify Purpose",
+            "LEVEL": "AAA",
             "DESCRIPTION": "In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined.",
             "DETAILS": {}
         },
         "1.4.1": {
             "TITLE": "Use of Color",
+            "LEVEL": "A",
             "DESCRIPTION": "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.",
             "DETAILS": {}
         },
         "1.4.2": {
             "TITLE": "Audio Control",
+            "LEVEL": "A",
             "DESCRIPTION": "If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.",
             "DETAILS": {}
         },
         "1.4.3": {
             "TITLE": "Contrast (Minimum)",
+            "LEVEL": "AA",
             "DESCRIPTION": "The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:",
             "DETAILS": {
                 "1": {
@@ -224,11 +243,13 @@
         },
         "1.4.4": {
             "TITLE": "Resize text",
+            "LEVEL": "AA",
             "DESCRIPTION": "Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.",
             "DETAILS": {}
         },
         "1.4.5": {
             "TITLE": "Images of Text",
+            "LEVEL": "AA",
             "DESCRIPTION": "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following:",
             "DETAILS": {
                 "1": {
@@ -243,6 +264,7 @@
         },
         "1.4.6": {
             "TITLE": "Contrast (Enhanced)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following:",
             "DETAILS": {
                 "1": {
@@ -261,6 +283,7 @@
         },
         "1.4.7": {
             "TITLE": "Low or No Background Audio",
+            "LEVEL": "AAA",
             "DESCRIPTION": "For prerecorded audio-only content that (1) contains primarily speech in the foreground, (2) is not an audio CAPTCHA or audio logo, and (3) is not vocalization intended to be primarily musical expression such as singing or rapping, at least one of the following is true:",
             "DETAILS": {
                 "1": {
@@ -279,6 +302,7 @@
         },
         "1.4.8": {
             "TITLE": "Visual Presentation",
+            "LEVEL": "AAA",
             "DESCRIPTION": "For the visual presentation of blocks of text, a mechanism is available to achieve the following:",
             "DETAILS": {
                 "1": {
@@ -300,11 +324,13 @@
         },
         "1.4.9": {
             "TITLE": "Images of Text (No Exception)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed.",
             "DETAILS": {}
         },
         "1.4.10": {
             "TITLE": "Reflow",
+            "LEVEL": "AA",
             "DESCRIPTION": "Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:",
             "DETAILS": {
                 "1": {
@@ -317,6 +343,7 @@
         },
         "1.4.11": {
             "TITLE": "Non-text Contrast",
+            "LEVEL": "AA",
             "DESCRIPTION": "The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):",
             "DETAILS": {
                 "1": {
@@ -331,6 +358,7 @@
         },
         "1.4.12": {
             "TITLE": "Text Spacing",
+            "LEVEL": "AA",
             "DESCRIPTION": "In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:",
             "DETAILS": {
                 "1": {
@@ -349,6 +377,7 @@
         },
         "1.4.13": {
             "TITLE": "Content on Hover or Focus",
+            "LEVEL": "AA",
             "DESCRIPTION": "Where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true:",
             "DETAILS": {
                 "1": {
@@ -367,21 +396,25 @@
         },
         "2.1.1": {
             "TITLE": "Keyboard",
+            "LEVEL": "A",
             "DESCRIPTION": "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.",
             "DETAILS": {}
         },
         "2.1.2": {
             "TITLE": "No Keyboard Trap",
+            "LEVEL": "A",
             "DESCRIPTION": "If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.",
             "DETAILS": {}
         },
         "2.1.3": {
             "TITLE": "Keyboard (No Exception)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.",
             "DETAILS": {}
         },
         "2.1.4": {
             "TITLE": "Character Key Shortcuts",
+            "LEVEL": "A",
             "DESCRIPTION": "If a keyboard shortcut is implemented in content using only letter (including upper- and lower-case letters), punctuation, number, or symbol characters, then at least one of the following is true:",
             "DETAILS": {
                 "1": {
@@ -400,6 +433,7 @@
         },
         "2.2.1": {
             "TITLE": "Timing Adjustable",
+            "LEVEL": "A",
             "DESCRIPTION": "For each time limit that is set by the content, at least one of the following is true:",
             "DETAILS": {
                 "1": {
@@ -430,6 +464,7 @@
         },
         "2.2.2": {
             "TITLE": "Pause, Stop, Hide",
+            "LEVEL": "A",
             "DESCRIPTION": "For moving, blinking, scrolling, or auto-updating information, all of the following are true:",
             "DETAILS": {
                 "1": {
@@ -444,96 +479,115 @@
         },
         "2.2.3": {
             "TITLE": "No Timing",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Timing is not an essential part of the event or activity presented by the content, except for non-interactive synchronized media and real-time events.",
             "DETAILS": {}
         },
         "2.2.4": {
             "TITLE": "Interruptions",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Interruptions can be postponed or suppressed by the user, except interruptions involving an emergency.",
             "DETAILS": {}
         },
         "2.2.5": {
             "TITLE": "Re-authenticating",
+            "LEVEL": "AAA",
             "DESCRIPTION": "When an authenticated session expires, the user can continue the activity without loss of data after re-authenticating.",
             "DETAILS": {}
         },
         "2.2.6": {
             "TITLE": "Timeouts",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Users are warned of the duration of any user inactivity that could cause data loss, unless the data is preserved for more than 20 hours when the user does not take any actions.",
             "DETAILS": {}
         },
         "2.3.1": {
             "TITLE": "Three Flashes or Below Threshold",
+            "LEVEL": "A",
             "DESCRIPTION": "Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.",
             "DETAILS": {}
         },
         "2.3.2": {
             "TITLE": "Three Flashes",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Web pages do not contain anything that flashes more than three times in any one second period.",
             "DETAILS": {}
         },
         "2.3.3": {
             "TITLE": "Animation from Interactions",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Motion animation triggered by interaction can be disabled, unless the animation is essential to the functionality or the information being conveyed.",
             "DETAILS": {}
         },
         "2.4.1": {
             "TITLE": "Bypass Blocks",
+            "LEVEL": "A",
             "DESCRIPTION": "A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.",
             "DETAILS": {}
         },
         "2.4.2": {
             "TITLE": "Page Titled",
+            "LEVEL": "A",
             "DESCRIPTION": "Web pages have titles that describe topic or purpose.",
             "DETAILS": {}
         },
         "2.4.3": {
             "TITLE": "Focus Order",
+            "LEVEL": "A",
             "DESCRIPTION": "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.",
             "DETAILS": {}
         },
         "2.4.4": {
             "TITLE": "Link Purpose (In Context)",
+            "LEVEL": "A",
             "DESCRIPTION": "The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general.",
             "DETAILS": {}
         },
         "2.4.5": {
             "TITLE": "Multiple Ways",
+            "LEVEL": "AA",
             "DESCRIPTION": "More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.",
             "DETAILS": {}
         },
         "2.4.6": {
             "TITLE": "Headings and Labels",
+            "LEVEL": "AA",
             "DESCRIPTION": "Headings and labels describe topic or purpose.",
             "DETAILS": {}
         },
         "2.4.7": {
             "TITLE": "Focus Visible",
+            "LEVEL": "AA",
             "DESCRIPTION": "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.",
             "DETAILS": {}
         },
         "2.4.8": {
             "TITLE": "Location",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Information about the user's location within a set of Web pages is available.",
             "DETAILS": {}
         },
         "2.4.9": {
             "TITLE": "Link Purpose (Link Only)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general.",
             "DETAILS": {}
         },
         "2.4.10": {
             "TITLE": "Section Headings",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Section headings are used to organize the content.",
             "DETAILS": {}
         },
         "2.5.1": {
             "TITLE": "Pointer Gestures",
+            "LEVEL": "A",
             "DESCRIPTION": "All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential.",
             "DETAILS": {}
         },
         "2.5.2": {
             "TITLE": "Pointer Cancellation",
+            "LEVEL": "A",
             "DESCRIPTION": "For functionality that can be operated using a single pointer, at least one of the following is true:",
             "DETAILS": {
                 "1": {
@@ -556,11 +610,13 @@
         },
         "2.5.3": {
             "TITLE": "Label in Name",
+            "LEVEL": "A",
             "DESCRIPTION": "For user interface components with labels that include text or images of text, the name contains the text that is presented visually.",
             "DETAILS": {}
         },
         "2.5.4": {
             "TITLE": "Motion Actuation",
+            "LEVEL": "A",
             "DESCRIPTION": "Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:",
             "DETAILS": {
                 "1": {
@@ -575,6 +631,7 @@
         },
         "2.5.5": {
             "TITLE": "Target Size",
+            "LEVEL": "AAA",
             "DESCRIPTION": "The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when:",
             "DETAILS": {
                 "1": {
@@ -597,81 +654,97 @@
         },
         "2.5.6": {
             "TITLE": "Concurrent Input Mechanisms",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Web content does not restrict use of input modalities available on a platform except where the restriction is essential, required to ensure the security of the content, or required to respect user settings.",
             "DETAILS": {}
         },
         "3.1.1": {
             "TITLE": "Language of Page",
+            "LEVEL": "A",
             "DESCRIPTION": "The default human language of each Web page can be programmatically determined.",
             "DETAILS": {}
         },
         "3.1.2": {
             "TITLE": "Language of Parts",
+            "LEVEL": "AA",
             "DESCRIPTION": "The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text.",
             "DETAILS": {}
         },
         "3.1.3": {
             "TITLE": "Unusual Words",
+            "LEVEL": "AAA",
             "DESCRIPTION": "A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and jargon.",
             "DETAILS": {}
         },
         "3.1.4": {
             "TITLE": "Abbreviations",
+            "LEVEL": "AAA",
             "DESCRIPTION": "A mechanism for identifying the expanded form or meaning of abbreviations is available.",
             "DETAILS": {}
         },
         "3.1.5": {
             "TITLE": "Reading Level",
+            "LEVEL": "AAA",
             "DESCRIPTION": "When text requires reading ability more advanced than the lower secondary education level after removal of proper names and titles, supplemental content, or a version that does not require reading ability more advanced than the lower secondary education level, is available.",
             "DETAILS": {}
         },
         "3.1.6": {
             "TITLE": "Pronunciation",
+            "LEVEL": "AAA",
             "DESCRIPTION": "A mechanism is available for identifying specific pronunciation of words where meaning of the words, in context, is ambiguous without knowing the pronunciation.",
             "DETAILS": {}
         },
         "3.2.1": {
             "TITLE": "On Focus",
+            "LEVEL": "A",
             "DESCRIPTION": "When any user interface component receives focus, it does not initiate a change of context.",
             "DETAILS": {}
         },
         "3.2.2": {
             "TITLE": "On Input",
+            "LEVEL": "A",
             "DESCRIPTION": "Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.",
             "DETAILS": {}
         },
         "3.2.3": {
             "TITLE": "Consistent Navigation",
+            "LEVEL": "AA",
             "DESCRIPTION": "Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.",
             "DETAILS": {}
         },
         "3.2.4": {
             "TITLE": "Consistent Identification",
+            "LEVEL": "AA",
             "DESCRIPTION": "Components that have the same functionality within a set of Web pages are identified consistently.",
             "DETAILS": {}
         },
         "3.2.5": {
             "TITLE": "Change on Request",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Changes of context are initiated only by user request or a mechanism is available to turn off such changes.",
             "DETAILS": {}
         },
         "3.3.1": {
             "TITLE": "Error Identification",
+            "LEVEL": "A",
             "DESCRIPTION": "If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.",
             "DETAILS": {}
         },
         "3.3.2": {
             "TITLE": "Labels or Instructions",
+            "LEVEL": "A",
             "DESCRIPTION": "Labels or instructions are provided when content requires user input.",
             "DETAILS": {}
         },
         "3.3.3": {
             "TITLE": "Error Suggestion",
+            "LEVEL": "AA",
             "DESCRIPTION": "If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.",
             "DETAILS": {}
         },
         "3.3.4": {
             "TITLE": "Error Prevention (Legal, Financial, Data)",
+            "LEVEL": "AA",
             "DESCRIPTION": "For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true:",
             "DETAILS": {
                 "1": {
@@ -690,11 +763,13 @@
         },
         "3.3.5": {
             "TITLE": "Help",
+            "LEVEL": "AAA",
             "DESCRIPTION": "Context-sensitive help is available.",
             "DETAILS": {}
         },
         "3.3.6": {
             "TITLE": "Error Prevention (All)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "For Web pages that require the user to submit information, at least one of the following is true:",
             "DETAILS": {
                 "1": {
@@ -713,61 +788,73 @@
         },
         "4.1.1": {
             "TITLE": "Parsing",
+            "LEVEL": "A",
             "DESCRIPTION": "In content implemented using markup languages, elements have complete start and end tags, elements are nested according to their specifications, elements do not contain duplicate attributes, and any IDs are unique, except where the specifications allow these features.",
             "DETAILS": {}
         },
         "4.1.2": {
             "TITLE": "Name, Role, Value",
+            "LEVEL": "A",
             "DESCRIPTION": "For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.",
             "DETAILS": {}
         },
         "4.1.3": {
             "TITLE": "Status Messages",
+            "LEVEL": "AA",
             "DESCRIPTION": "In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.",
             "DETAILS": {}
         },
         "2.4.11": {
             "TITLE": "Focus Not Obscured (Minimum)",
+            "LEVEL": "AA",
             "DESCRIPTION": "When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.",
             "DETAILS": {}
         },
         "2.4.12": {
             "TITLE": "Focus Not Obscured (Enhanced)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "When a user interface component receives keyboard focus, no part of the component is hidden by author-created content.",
             "DETAILS": {}
         },
         "2.4.13": {
             "TITLE": "Focus Appearance",
+            "LEVEL": "AAA",
             "DESCRIPTION": "When the keyboard focus indicator is visible, an area of the focus indicator meets all the following:",
             "DETAILS": {}
         },
         "2.5.7": {
             "TITLE": "Dragging Movements",
+            "LEVEL": "AA",
             "DESCRIPTION": "All functionality that uses a dragging movement for operation can be achieved by a single pointer without dragging, unless dragging is essential or the functionality is determined by the user agent and not modified by the author.",
             "DETAILS": {}
         },
         "2.5.8": {
             "TITLE": "Target Size (Minimum)",
+            "LEVEL": "AA",
             "DESCRIPTION": "The size of the target for pointer inputs is at least 24 by 24 CSS pixels, except where:",
             "DETAILS": {}
         },
         "3.2.6": {
             "TITLE": "Consistent Help",
+            "LEVEL": "A",
             "DESCRIPTION": "If a Web page contains any of the following help mechanisms, and those mechanisms are repeated on multiple Web pages within a set of Web pages, they occur in the same order relative to other page content, unless a change is initiated by the user:",
             "DETAILS": {}
         },
         "3.3.7": {
             "TITLE": "Redundant Entry",
+            "LEVEL": "A",
             "DESCRIPTION": "Information previously entered by or provided to the user that is required to be entered again in the same process is either:",
             "DETAILS": {}
         },
         "3.3.8": {
             "TITLE": "Accessible Authentication (Minimum)",
+            "LEVEL": "AA",
             "DESCRIPTION": "A cognitive function test (such as remembering a password or solving a puzzle) is not required for any step in an authentication process unless that step provides at least one of the following:",
             "DETAILS": {}
         },
         "3.3.9": {
             "TITLE": "Accessible Authentication (Enhanced)",
+            "LEVEL": "AAA",
             "DESCRIPTION": "A cognitive function test (such as remembering a password or solving a puzzle) is not required for any step in an authentication process unless that step provides at least one of the following:",
             "DETAILS": {}
         }

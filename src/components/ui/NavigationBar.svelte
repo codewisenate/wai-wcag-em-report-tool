@@ -77,6 +77,10 @@
     {
       path: '/evaluation/view-report',
       title: $translate('UI.NAV.WZRD_VIEWREPORT')
+    },
+    {
+      path: '/evaluation/view-vpat',
+      title: $translate('UI.NAV.WZRD_VIEWVPAT')
     }
   ];
 

@@ -10,7 +10,7 @@ import appJsonLdContext, {
   importContext
 } from '@app/data/jsonld/appContext.js';
 import webTechnologies from '@app/data/webtechnologies.json';
-import { downloadFileJSON } from '@app/scripts/files.js';
+import { downloadFileJSON } from '@app/scripts/files-conformance.js';
 
 // Import related stores and combine
 import { TestResult } from '@app/stores/earl/resultStore/models.js';

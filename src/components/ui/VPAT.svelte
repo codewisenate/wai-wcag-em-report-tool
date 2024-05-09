@@ -1,18 +1,35 @@
 <!--
  * @component
- *   Report
+ *   VPAT
  * -->
 <div tabindex="-1" bind:this={sectionAbout}>
-  <h3>{TRANSLATED.HEADING_ABOUT}</h3>
-  <dl>
 
+  <h3>{TRANSLATED.REPORT_DATE}</h3>
+  <ReportHeaderValue field="EVALUATION_DATE" store="summaryStore" />
+
+  <div tabindex="-1" bind:this={sectionExecutiveSummary}>
+    <h3>{TRANSLATED.HEADING_SUMMARY_VPAT}</h3>
+
+      <div>
+        <ReportHeaderValue 
+          multiline={true} 
+          field="EVALUATION_SUMMARY" 
+          store="summaryStore">
+        </ReportHeaderValue>
+      </div>
+  </div>
+
+  <h3>{TRANSLATED.HEADING_ABOUT_VPAT}</h3>
+
+
+  <dl>
     <dt>
-      <ReportHeaderKey editing={editAbout} field="EVALUATION_CREATOR">
+      <ReportHeaderKey field="EVALUATION_CREATOR">
         {TRANSLATED.LABEL_EVALUATOR}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue editing={editAbout} field="EVALUATION_CREATOR" store="summaryStore"></ReportHeaderValue>
+      <ReportHeaderValue field="EVALUATION_CREATOR" store="summaryStore"></ReportHeaderValue>
     </dd>
 
     <dt>
@@ -21,64 +38,11 @@
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue editing={editAbout} field="EVALUATION_COMMISSIONER" store="summaryStore" />
-    </dd>
-
-    <dt>
-      <ReportHeaderKey editing={editAbout} field="EVALUATION_DATE">
-        {TRANSLATED.LABEL_DATE}
-      </ReportHeaderKey>
-    </dt>
-    <dd>
-      <ReportHeaderValue editing={editAbout} field="EVALUATION_DATE" store="summaryStore" />
+      <ReportHeaderValue field="EVALUATION_COMMISSIONER" store="summaryStore" />
     </dd>
   </dl>
 
-  {#if editAbout}
-  <button class="button button-secondary" on:click={toggleEditAbout}>
-    {TRANSLATED.BUTTON_SAVE}  
-    <span class="visually-hidden">{TRANSLATED.HEADING_ABOUT}</span>
-  </button>
-  {:else}
-  <button class="button button-secondary" on:click={toggleEditAbout}>
-    {TRANSLATED.BUTTON_EDIT} 
-    <span class="visually-hidden">{TRANSLATED.HEADING_ABOUT}</span>
-  </button>
-  {/if}
-</div>
-
-<div tabindex="-1" bind:this={sectionExecutiveSummary}>
-  <h3>{TRANSLATED.HEADING_SUMMARY}</h3>
-  {#if editExecutiveSummary}
-    <div>
-      <ReportHeaderValue 
-        editing={editExecutiveSummary} 
-        multiline={true} 
-        field="EVALUATION_SUMMARY" 
-        store="summaryStore">
-      </ReportHeaderValue>
-    </div>
-    <button class="button button-secondary" on:click={toggleEditExecutiveSummary}>
-      {TRANSLATED.BUTTON_SAVE} 
-      <span class="visually-hidden">{TRANSLATED.HEADING_SUMMARY}</span>
-    </button>  
-  {:else}
-    <div>
-    {#if $summaryStore['EVALUATION_SUMMARY']}
-     {@html marked($summaryStore['EVALUATION_SUMMARY'])}
-    {:else}
-      <span class="no-result">{TRANSLATED.LABEL_NOT_PROVIDED}</span>
-    {/if}
-    </div>
-    <button class="button button-secondary" on:click={toggleEditExecutiveSummary}>
-      {TRANSLATED.BUTTON_EDIT} 
-      <span class="visually-hidden">{TRANSLATED.HEADING_SUMMARY}</span>
-    </button>
-  {/if}
-</div>
-
-<div tabindex="-1" bind:this={sectionEvaluationScope}>
-  <h3>{TRANSLATED.HEADING_SCOPE}</h3>
+  <h3>Notes</h3>
   <dl>
     <dt>
       <ReportHeaderKey editing={editEvaluationScope} field="SITE_NAME">
@@ -88,7 +52,7 @@
     <dd>
       <ReportHeaderValue editing={editEvaluationScope} field="SITE_NAME" store="scopeStore" />
     </dd>
-
+  
     <dt>
       <ReportHeaderKey editing={editEvaluationScope} field="WEBSITE_SCOPE">
         {TRANSLATED.LABEL_WEBSITE_SCOPE}
@@ -97,101 +61,88 @@
     <dd>
       <ReportHeaderValue editing={editEvaluationScope} field="WEBSITE_SCOPE" store="scopeStore" multiline={true} />
     </dd>
-
     <dt>
-      <ReportHeaderKey editing={editEvaluationScope} field="WCAG_VERSION">
-        {TRANSLATED.LABEL_WCAG_VERSION}
-      </ReportHeaderKey>
-    </dt>
-    <dd>
-      <ReportHeaderMultiValue editing={editEvaluationScope} field="WCAG_VERSION" store="scopeStore" options={wcagVersions}></ReportHeaderMultiValue>
-    </dd>
-
-    <dt>
-      <ReportHeaderKey editing={editEvaluationScope} field="CONFORMANCE_TARGET">
-        {TRANSLATED.LABEL_CONFORMANCE_TARGET}
-      </ReportHeaderKey>
-    </dt>
-    <dd>
-      <ReportHeaderMultiValue editing={editEvaluationScope} field="CONFORMANCE_TARGET" store="scopeStore" options={conformanceLevels}></ReportHeaderMultiValue>
-    </dd>
-
-    <dt>
-      <ReportHeaderKey editing={editEvaluationScope} field="AS_BASELINE">
+      <ReportHeaderKey field="AS_BASELINE">
         {TRANSLATED.LABEL_ACCESSIBILITY_SUPPORT_BASELINE}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue editing={editEvaluationScope} field="AS_BASELINE" store="scopeStore" multiline={true} />
+      <ReportHeaderValue field="AS_BASELINE" store="scopeStore" multiline={true} />
     </dd>
 
     <dt>
-      <ReportHeaderKey editing={editEvaluationScope} field="ADDITIONAL_REQUIREMENTS">
+      <ReportHeaderKey field="ADDITIONAL_REQUIREMENTS"> 
         {TRANSLATED.LABEL_EXTRA_REQUIREMENTS}
       </ReportHeaderKey>
     </dt>
     <dd>
-      <ReportHeaderValue editing={editEvaluationScope} field="ADDITIONAL_REQUIREMENTS" store="scopeStore" multiline={true} />
+      <ReportHeaderValue field="ADDITIONAL_REQUIREMENTS" store="scopeStore" multiline={true} />
     </dd>
   </dl>
 
-  {#if editEvaluationScope}
-  <button class="button button-secondary" on:click={toggleEditEvaluationScope}>
-    {TRANSLATED.BUTTON_SAVE}  
-    <span class="visually-hidden">{TRANSLATED.HEADING_SCOPE}</span>
-  </button>
-  {:else}
-  <button class="button button-secondary" on:click={toggleEditEvaluationScope}>
-    {TRANSLATED.BUTTON_EDIT}  
-    <span class="visually-hidden">{TRANSLATED.HEADING_SCOPE}</span>
-  </button>
-  {/if}
+
+</div>
+
+
+
+<div tabindex="-1" bind:this={sectionEvaluationScope}>
+  <h3>{TRANSLATED.HEADING_SCOPE_VPAT}</h3>
+  <div>This report covers the degree of conformance for the following accessibility standard/guidelines:</div>
+  <dl>
+
+    <dt>
+      <ReportHeaderKey field="WCAG_VERSION">
+        {TRANSLATED.LABEL_WCAG_VERSION}
+      </ReportHeaderKey>
+    </dt>
+    <dd>
+      <ReportHeaderMultiValue field="WCAG_VERSION" store="scopeStore" options={wcagVersions}></ReportHeaderMultiValue>
+    </dd>
+
+    <dt>
+      <ReportHeaderKey field="CONFORMANCE_TARGET">
+       Level  {TRANSLATED.LABEL_CONFORMANCE_TARGET}
+      </ReportHeaderKey>
+    </dt>
+    <dd>
+      <ReportHeaderMultiValue field="CONFORMANCE_TARGET" store="scopeStore" options={conformanceLevels}></ReportHeaderMultiValue>
+    </dd>
+  </dl>
+</div>
+
+<h3>Terms</h3>
+<div>The terms used in the Conformance Level information are defined as follows:</div>
+<div class="card">
+<dl>
+  <dt>Supports</dt>
+  <dd>The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.</dd>
+  <dt>Partially Supports</dt>
+  <dd>Some functionality of the product does not meet the criterion.</dd>
+  <dt>Does Not Support</dt>
+  <dd>The majority of product functionality does not meet the criterion.</dd>
+  <dt>Not Applicable</dt>
+  <dd>The criterion is not relevant to the product.</dd>
+  <dt>Not Evaluated</dt>
+  <dd>The product has not been evaluated against the criterion. This can be used only in WCAG 2.0 Level AAA.</dd>
+</dl>
 </div>
 
 <h2>{TRANSLATED.HEADING_AUDIT_RESULTS_DETAIL}</h2>
 
-<h3>{TRANSLATED.SUMMARY}</h3>
-<ReportSummary />
+<ReportVPATResults criteria="{$wcag}" />
 
-<h3>{TRANSLATED.ALL_RESULTS}</h3>
-<ReportAllResults criteria="{$wcag}" />
+<h2 class='strip'>Disclaimer</h2>
+<p>This report covers the degree of conformance for Web Content Accessibility Guidelines <ReportHeaderMultiValue editing={editEvaluationScope} field="WCAG_VERSION" store="scopeStore" options={wcagVersions}></ReportHeaderMultiValue>. Therefore other details and standards have not been included.</p>
 
-<h2>{TRANSLATED.HEADING_SAMPLE}</h2>
-{#if report.samples.length > 0}
-  <ol>
-    {#each report.samples as sample}
-      <li>
-        <span>{sample.title}</span> - <span>{sample.description}</span>
-      </li>
-    {/each}
-  </ol>
-{:else}
-  <p>{TRANSLATED.TEXT_NO_SAMPLE}</p>
-{/if}
+<div>“Voluntary Product Accessibility Template” and “VPAT” are registered service marks of the Information Technology Industry Council (ITI)</div>
 
-<h2>{TRANSLATED.LABEL_TECH}</h2>
-{#if report.tech != ""}
-  <p>{report.tech}</p>
-{:else}
-  <p>{TRANSLATED.LABEL_NOT_PROVIDED}</p>
-{/if}
-
-<h2>{TRANSLATED.HEADING_SPECIFICS}</h2>
-<p>{@html marked(report.specifics) || TRANSLATED.LABEL_NOT_PROVIDED}</p>
-
-<h2 class='strip'>{TRANSLATED.HEADING_RESOURCES}</h2>
-<ul class='strip'>
-  <li><a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)
-    Overview</a></li>
-  <li><a href="https://www.w3.org/WAI/WCAG22/quickref/">How to Meet WCAG Quick Reference</a></li>
-  <li><a href="https://www.w3.org/WAI/eval/conformance/">WCAG Evaluation Methodology (WCAG-EM)
-    Overview</a></li>
-</ul>
 <!-- /component -->
 
 <style>
+  h3 {
+    margin-bottom: 0.5rem;
+  }
   dt {
-    grid-column: 1 / 2;
     margin-top: 0;
     font-weight: normal;
   }
@@ -199,20 +150,22 @@
     content: ":";
   }
   dd {
-    font-weight: bold;
     margin-left: 0;
     margin-bottom: 1em;
-    grid-column: 2 / 3;
   }
   @media (min-width: 40em) {
     dl {
       display: grid;
-      grid-template-columns: auto 2fr;
+      grid-template-columns: minmax(auto, 1fr) 3fr;
       gap: 0.5em 1em;
     }
     dd {
       margin-bottom: 0;
     }
+  }
+
+  .card dt {
+    font-weight: bold;
   }
   .no-result {
     font-weight: normal;
@@ -228,7 +181,6 @@
 
   import { wcag, CONFORMANCE_LEVELS, WCAG_VERSIONS } from '@app/stores/wcagStore.js';
 
-  import ReportAllResults from '@app/components/ui/Report/ReportAllResults.svelte';
   import ReportVPATResults from '@app/components/ui/Report/ReportVPATResults.svelte';
   import ReportHeaderKey from '@app/components/ui/Report/ReportHeaderKey.svelte';
   import ReportHeaderValue from '@app/components/ui/Report/ReportHeaderValue.svelte';
@@ -250,11 +202,15 @@
     LABEL_COMMISSIONER: $translate('UI.REPORT.COMMISION_BY'),
     LABEL_NOT_PROVIDED: $translate('UI.REPORT.LABEL_NOT_PROVIDED'),
     LABEL_DATE: $translate('PAGES.SUMMARY.LABEL_DATE'),
+    REPORT_DATE: $translate('PAGES.SUMMARY.REPORT_DATE'),
     BUTTON_SAVE: $translate('UI.REPORT.SAVE'),
     BUTTON_EDIT: $translate('UI.REPORT.EDIT'),
     HEADING_ABOUT: $translate('UI.REPORT.HD_ABOUT'),
+    HEADING_ABOUT_VPAT: $translate('UI.REPORT.HD_ABOUT_VPAT'),
     HEADING_SUMMARY: $translate('UI.REPORT.HD_SUMMARY'),
+    HEADING_SUMMARY_VPAT: $translate('UI.REPORT.HD_SUMMARY_VPAT'),
     HEADING_SCOPE: $translate('UI.REPORT.HD_SCOPE'),
+    HEADING_SCOPE_VPAT: $translate('UI.REPORT.HD_SCOPE_VPAT'),
     LABEL_WEBSITE_NAME: $translate('PAGES.SCOPE.LABEL_SITE_NAME'),
     LABEL_WEBSITE_SCOPE: $translate('PAGES.SCOPE.LABEL_SITE_SCOPE'),
     LABEL_WCAG_VERSION: $translate('PAGES.SCOPE.LABEL_WCAG_VERSION'),

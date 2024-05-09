@@ -16,12 +16,14 @@
       {/if}
       <slot />
     </main>
-    <YourReport />
+    {#if !isViewReport && !isViewVPAT && !isAcknowledgements}
+      <YourReport />
+    {/if}
   </div>
 {:else}
   <div class="default-grid">
     <main class="main-without-panel">
-      {#if !isViewReport && !isOverview && !isAcknowledgements}
+      {#if !isViewReport && !isViewVPAT && !isOverview && !isAcknowledgements}
       <YourReport />
       {/if}
       <h1>{title}</h1>
@@ -51,6 +53,15 @@
   :global(main > *:not(:last-child)) {
     margin-bottom: 1em;
   }
+
+  :global(.mb-0.mb-0) {
+    margin-bottom: 0;
+  }
+
+  h1,
+  .button {
+    margin-block: 1rem 0;
+  }
 </style>
 
 <script>
@@ -71,9 +82,10 @@
   export let pageid;
 
   $: isViewReport = $location.pathname === $routes.VIEW_REPORT.path;
+  $: isViewVPAT = $location.pathname === $routes.VIEW_VPAT.path;
   $: isOverview = $location.pathname === $routes.OVERVIEW.path;
   $: isAcknowledgements = $location.pathname === $routes.ACKNOWLEDGEMENTS.path;
-  $: needsPanelSpace = !isViewReport && !isOverview && !isAcknowledgements && $yourReportPanelOpen;
+  $: needsPanelSpace = !isViewReport && !isViewVPAT && !isOverview && !isAcknowledgements && $yourReportPanelOpen;
 
   onMount(() => {
     setTimeout(honourFragmentIdLinks($location), 100);

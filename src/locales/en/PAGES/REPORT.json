@@ -1,9 +1,12 @@
 {
     "TITLE": "Report",
-    "BTN_SAVE_HTML": "Download Report (HTML)",
+    "BTN_SAVE_HTML": "Download Conformance Report (HTML)",
+    "BTN_SAVE_VPAT_HTML": "Download VPAT (HTML)",
     "BTN_SAVE_JSON": "Download Report (JSON)",
     "HEADER_SUCCESS_CRITERION": "Success Criterion",
     "HEADER_RESULT": "Result",
+    "HEADER_RESULT_VPAT": "Conformance Level",
     "HEADER_OBSERVATIONS": "Observations",
+    "HEADER_OBSERVATIONS_VPAT": "Remarks and Explanations",
     "NO_OBSERVATIONS_FOUND": "No observations added"
 }

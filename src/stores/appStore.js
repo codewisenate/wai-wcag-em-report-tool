@@ -31,6 +31,10 @@ export const routes = derived([translate], ([$translate]) => {
       title: $translate('UI.NAV.STEP_VIEWREPORT'),
       path: '/evaluation/view-report'
     },
+    VIEW_VPAT: {
+      title: $translate('UI.NAV.STEP_VIEWVPAT'),
+      path: '/evaluation/view-vpat'
+    },
     ACKNOWLEDGEMENTS: {
       title: "Acknowledgements",
       path: "/acknowledgements"

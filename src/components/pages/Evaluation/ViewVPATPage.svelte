@@ -1,18 +1,17 @@
 <Page title="all•Access Accessibility Conformance Report" pageid="view-report">
 
-    <p><strong>Audit results for Web Content Accessibility Guidelines (WCAG) evaluation methodology</strong></p>
+  <p><strong>Based on VPAT<small><sup>&reg;</sup></small> version 2.5 WCAG Edition (November 2023)</strong></p>
 
-    <Button on:click="{handleHTMLDownloadClick}">
-      <span>{TRANSLATED.BUTTON_SAVE_HTML}</span>
-    </Button>
-    <Button on:click="{handleJSONDownloadClick}">
-      <span>{TRANSLATED.BUTTON_SAVE_JSON}</span>
-    </Button>
+  <Button on:click="{handleVPATDownloadClick}">
+    <span>{TRANSLATED.BUTTON_SAVE_VPAT_HTML}</span>
+  </Button>
 
-    <h2>Conformance Report for {$summaryStore['EVALUATION_TITLE'] ? $summaryStore['EVALUATION_TITLE'] : TRANSLATED.PAGE_TITLE}</h2>
+  <h2 class="mb-0">Name of Product: {$summaryStore['EVALUATION_TITLE'] ? $summaryStore['EVALUATION_TITLE'] : TRANSLATED.PAGE_TITLE}</h2>
+  <div><small>Includes version if necessary</small></div>
 
-    <Report />
-</Page>
+  <VPAT />
+
+</Page> 
 
 <script>
   import { getContext } from 'svelte';
@@ -34,6 +33,7 @@
   import Button from '@app/components/ui/Button.svelte';
   import Page from '@app/components/ui/Page.svelte';
   import Report from '@app/components/ui/Report.svelte';
+  import VPAT from '@app/components/ui/VPAT.svelte';
 
   const { translate } = getContext('app');
 
@@ -48,17 +48,6 @@
 
   $: htmlFilename = $scopeStore.SITE_NAME ? `${slugify($scopeStore.SITE_NAME)}-report.html` : 'report.html';
 
-  function handleHTMLDownloadClick() {
-    let reportContents = document.getElementById("view-report");
-    
-    downloadFileHTML({
-      contents: reportContents,
-      name: 'conformance-' + htmlFilename,
-      type: 'text/html',
-      lang: $locale
-    });
-  }
-
   function handleVPATDownloadClick() {
     let reportContents = document.getElementById("view-report");
     
@@ -68,11 +57,6 @@
       type: 'text/html',
       lang: $locale
     });
-  }  
-
-  function handleJSONDownloadClick() {
-    updateEvaluation();
-    $evaluationStore.save();
   }
 
 </script>

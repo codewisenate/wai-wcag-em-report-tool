@@ -1,4 +1,4 @@
-export function downloadFileHTML({ contents, name = 'download.txt', type = 'text/plain', lang = 'en' }) {
+export function downloadFileVPAT({ contents, name = 'download.txt', type = 'text/plain', lang = 'en' }) {
   const _a = document.createElement('a');
 
   const htmlDocument = document.implementation.createHTMLDocument(name);
@@ -41,7 +41,7 @@ export function downloadFileHTML({ contents, name = 'download.txt', type = 'text
 
   // add CSS 
   const styleEl = document.createElement("style");
-  const styleElContents = document.createTextNode(`
+  const styleElContents = document.createTextNode(`x
   :root {
     --w3c-classic: #005a9c;
     --w3c-blue: #036;
@@ -3283,7 +3283,7 @@ export function downloadFileHTML({ contents, name = 'download.txt', type = 'text
  
   h1,
   h1+h2 {
-    margin-top: 0;
+    margin-block: 1rem 0;
   }
  
   h2 {
@@ -8783,7 +8783,32 @@ export function downloadFileHTML({ contents, name = 'download.txt', type = 'text
       font-size: 1rem;
       font-weight: 700;
       color: var(--w3c-classic) !important;
-    };
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+  dt {
+    margin-top: 0;
+    font-weight: normal;
+  }
+  dt:after {
+    content: ":";
+  }
+  dd {
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
+  @media (min-width: 40em) {
+    dl {
+      display: grid;
+      grid-template-columns: minmax(auto, 1fr) 3fr;
+      gap: 0.5em 1em;
+    }
+    dd {
+      margin-bottom: 0;
+    }
   }
   `);
   styleEl.appendChild(styleElContents);
