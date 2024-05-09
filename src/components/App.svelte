@@ -107,6 +107,7 @@
 
   function forceEvaluationUpdate() {
     $evaluationStore.reportFindings.evaluator = $summaryStore.EVALUATION_CREATOR;
+    $evaluationStore.reportFindings.evaluatorContact = $summaryStore.EVALUATION_CREATOR_CONTACT;
     $evaluationStore.reportFindings.commissioner = $summaryStore.EVALUATION_COMMISSIONER;
     $evaluationStore.reportFindings.date = $summaryStore.EVALUATION_DATE;
     $evaluationStore.reportFindings.summary = $summaryStore.EVALUATION_SUMMARY;

@@ -27,6 +27,13 @@
     />
 
     <Input
+      id="evaluation_creator_contact"
+      label="{TRANSLATED.EVALUATOR_CONTACT_LABEL}"
+      helptext="{TRANSLATED.EVALUATOR_CONTACT_HELPTEXT}"
+      bind:value="{$summaryStore['EVALUATION_CREATOR_CONTACT']}"
+    />
+
+    <Input
       id="evaluation_date"
       label="{TRANSLATED.DATE_LABEL}"
       helptext="{TRANSLATED.DATE_HELPTEXT}"
@@ -82,6 +89,8 @@
     COMMISSIONER_HELPTEXT: $translate('PAGES.SUMMARY.INF_COMMISSIONER'),
     EVALUATOR_LABEL: $translate('PAGES.SUMMARY.LABEL_CREATOR'),
     EVALUATOR_HELPTEXT: $translate('PAGES.SUMMARY.INF_CREATOR'),
+    EVALUATOR_CONTACT_LABEL: $translate('PAGES.SUMMARY.LABEL_CREATOR_CONTACT'),
+    EVALUATOR_CONTACT_HELPTEXT: $translate('PAGES.SUMMARY.INF_CREATOR_CONTACT'),
     DATE_LABEL: $translate('PAGES.SUMMARY.LABEL_DATE'),
     DATE_HELPTEXT: $translate('PAGES.SUMMARY.INF_DATE'),
     EXECUTIVE_SUMMARY_LABEL: $translate('PAGES.SUMMARY.LABEL_SUMMARY'),

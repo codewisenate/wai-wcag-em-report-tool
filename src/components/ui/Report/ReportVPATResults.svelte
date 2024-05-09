@@ -53,7 +53,7 @@
                         {#if outcomeMap[assertion.result.outcome.title]}
                           {outcomeMap[assertion.result.outcome.title]}
                         {:else}
-                          {assertion.result.outcome.title || TRANSLATED.TEXT_NOT_CHECKED}
+                          {assertion.result.outcome.title || TRANSLATED.TEXT_NOT_CHECKED_VPAT}
                         {/if}
                       </p>
                     {:else}
@@ -61,7 +61,7 @@
                         <span
                           class="results-label-mobile"
                         >{TRANSLATED.HEADER_RESULT}:</span>
-                        {TRANSLATED.TEXT_NOT_CHECKED}
+                        {TRANSLATED.TEXT_NOT_CHECKED_VPAT}
                       </p>
                     {/each}
                     {#if sampleAssertions(criterion).length}
@@ -77,7 +77,7 @@
                             {#if outcomeMap[assertion.result.outcome.title]}
                               {outcomeMap[assertion.result.outcome.title]}
                             {:else}
-                              {assertion.result.outcome.title || TRANSLATED.TEXT_NOT_CHECKED}
+                              {assertion.result.outcome.title || TRANSLATED.TEXT_NOT_CHECKED_VPAT}
                             {/if}
                           </p>
                         {/if}
@@ -245,6 +245,7 @@
     HEADING_SCOPE_RESULTS: $translate('PAGES.AUDIT.SAMPLE_FINDINGS'),
     HEADING_RESULTS_FOR: $translate('PAGES.AUDIT.RESULTS_FOR'),
     TEXT_NOT_CHECKED: $translate('UI.EARL.UNTESTED'),
+    TEXT_NOT_CHECKED_VPAT: 'Not Evaluated',
     HEADER_SUCCESS_CRITERION: $translate(
       'PAGES.REPORT.HEADER_SUCCESS_CRITERION'
     ),

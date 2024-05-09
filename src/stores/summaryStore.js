@@ -4,6 +4,7 @@ export const initialSummaryStore = {
   EVALUATION_TITLE: '',
   EVALUATION_COMMISSIONER: '',
   EVALUATION_CREATOR: '',
+  EVALUATION_CREATOR_CONTACT: '',
   EVALUATION_DATE: new Date().toDateString(),
   EVALUATION_SUMMARY: '',
   EVALUATION_SPECIFICS: ''

@@ -9,6 +9,8 @@
     "INF_COMMISSIONER": "The person, team of people, organization, in-house department, or other entity that commissioned the evaluation.",
     "LABEL_CREATOR": "Evaluator",
     "INF_CREATOR": "The person, team of people, organization, in-house department, or other entity responsible for carrying out the evaluation.",
+    "LABEL_CREATOR_CONTACT": "Evaluator contact email or other contact details",
+    "INF_CREATOR_CONTACT": "Contact Information for follow-up questions. Listing an email is sufficient.",
     "LABEL_DATE": "Evaluation date",
     "REPORT_DATE": "Report date",
     "INF_DATE": "Provide the completion date or duration dates of this evaluation. You can use any date format. Write out the month to make it clear internationally. (The date format 01-02-2022 is ambiguous — it is 2 January in some places and 1 February in some places.)",

@@ -76,6 +76,7 @@ const evaluationContext = {
   documentSteps: 'wcagem:step5a',
   commissioner: 'wcagem:commissioner',
   evaluator: 'wcagem:evaluator',
+  evaluatorContact: 'wcagem:evaluatorContact',
   evaluationSpecifics: 'wcagem:step5b'
 };
 
@@ -135,6 +136,7 @@ class EvaluationModel {
       commissioner: '',
       date: new Date(),
       evaluator: '',
+      evaluatorContact: '',
       evaluationSpecifics: '',
       summary: '',
       title: ''
@@ -443,6 +445,7 @@ class EvaluationModel {
               framedEvaluation.commissioner ||
               '',
             EVALUATION_CREATOR: reportFindings.evaluator || altCreator || '',
+            EVALUATION_CREATOR_CONTACT: reportFindings.evaluatorContact || '',
             EVALUATION_DATE: altDate || framedEvaluation.date || '',
             EVALUATION_SUMMARY:
               reportFindings.summary || framedEvaluation.summary || '',
@@ -642,6 +645,7 @@ export default (
 
     const {
       EVALUATION_CREATOR,
+      EVALUATION_CREATOR_CONTACT,
       EVALUATION_COMMISSIONER,
       EVALUATION_DATE,
       EVALUATION_SPECIFICS,
@@ -680,6 +684,7 @@ export default (
       commissioner: EVALUATION_COMMISSIONER,
       date: EVALUATION_DATE,
       evaluator: EVALUATION_CREATOR,
+      evaluatorContact: EVALUATION_CREATOR_CONTACT,
       evaluationSpecifics: EVALUATION_SPECIFICS,
       summary: EVALUATION_SUMMARY,
       title: EVALUATION_TITLE

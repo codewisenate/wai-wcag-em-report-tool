@@ -33,6 +33,15 @@
     </dd>
 
     <dt>
+      <ReportHeaderKey field="EVALUATION_CREATOR_CONTACT">
+        {TRANSLATED.LABEL_EVALUATOR_CONTACT}
+      </ReportHeaderKey>
+    </dt>
+    <dd>
+      <ReportHeaderValue field="EVALUATION_CREATOR_CONTACT" store="summaryStore"></ReportHeaderValue>
+    </dd>
+
+    <dt>
       <ReportHeaderKey editing={editAbout} field="EVALUATION_COMMISSIONER">
         {TRANSLATED.LABEL_COMMISSIONER}
       </ReportHeaderKey>
@@ -199,6 +208,7 @@
 
   $: TRANSLATED = {
     LABEL_EVALUATOR: $translate('UI.REPORT.BY'),
+    LABEL_EVALUATOR_CONTACT: $translate('UI.REPORT.BY_CONTACT'),
     LABEL_COMMISSIONER: $translate('UI.REPORT.COMMISION_BY'),
     LABEL_NOT_PROVIDED: $translate('UI.REPORT.LABEL_NOT_PROVIDED'),
     LABEL_DATE: $translate('PAGES.SUMMARY.LABEL_DATE'),
@@ -232,6 +242,7 @@
   $: report = {
     commissioner: $summaryStore['EVALUATION_COMMISSIONER'],
     creator: $summaryStore['EVALUATION_CREATOR'],
+    creatorContact: $summaryStore['EVALUATION_CREATOR_CONTACT'],
     date: $summaryStore['EVALUATION_DATE'],
     samples: [
       ...$sampleStore['STRUCTURED_SAMPLE'],
