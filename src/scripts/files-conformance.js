@@ -8297,6 +8297,10 @@ export function downloadFileHTML({ contents, name = 'download.txt', type = 'text
     margin-top: 0;
     font-weight: normal;
   }
+
+  .card dt.svelte {
+    font-weight: bold;
+  }
  
   dt.svelte:after {
     content: ":";
@@ -8312,7 +8316,7 @@ export function downloadFileHTML({ contents, name = 'download.txt', type = 'text
   @media(min-width: 40em) {
     dl.svelte {
       display: grid;
-      grid-template-columns: auto 2fr;
+      grid-template-columns: minmax(auto, 1fr) 3fr;
       gap: 0.5em 1em
     }
  
