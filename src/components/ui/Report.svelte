@@ -3,7 +3,7 @@
  *   Report
  * -->
 <div tabindex="-1" bind:this={sectionAbout}>
-  <h3>{TRANSLATED.HEADING_ABOUT}</h3>
+  <h2>{TRANSLATED.HEADING_ABOUT}</h2>
   <dl>
 
     <dt>
@@ -48,9 +48,9 @@
 </div>
 
 <div tabindex="-1" bind:this={sectionExecutiveSummary}>
-  <h3>{TRANSLATED.HEADING_SUMMARY}</h3>
+  <h2>{TRANSLATED.HEADING_SUMMARY}</h2>
   {#if editExecutiveSummary}
-    <div>
+    <div style="font-weight: normal; white-space: pre-wrap;">
       <ReportHeaderValue 
         editing={editExecutiveSummary} 
         multiline={true} 
@@ -78,7 +78,7 @@
 </div>
 
 <div tabindex="-1" bind:this={sectionEvaluationScope}>
-  <h3>{TRANSLATED.HEADING_SCOPE}</h3>
+  <h2>{TRANSLATED.HEADING_SCOPE}</h2>
   <dl>
     <dt>
       <ReportHeaderKey editing={editEvaluationScope} field="SITE_NAME">
@@ -130,7 +130,7 @@
         {TRANSLATED.LABEL_EXTRA_REQUIREMENTS}
       </ReportHeaderKey>
     </dt>
-    <dd>
+    <dd style="font-weight: normal; white-space: pre-wrap;">
       <ReportHeaderValue editing={editEvaluationScope} field="ADDITIONAL_REQUIREMENTS" store="scopeStore" multiline={true} />
     </dd>
   </dl>
